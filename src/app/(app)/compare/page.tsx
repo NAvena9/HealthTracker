@@ -1,7 +1,10 @@
-export default function Page() {
+import { Suspense } from 'react';
+import { CompareTab } from '@/components/tabs/CompareTab';
+
+export default function ComparePage() {
   return (
-    <div className="card">
-      <p className="sub">Loading…</p>
-    </div>
+    <Suspense fallback={null}>
+      <CompareTab />
+    </Suspense>
   );
 }
