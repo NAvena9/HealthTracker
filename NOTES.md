@@ -15,7 +15,7 @@ No Supabase project? `node tests/e2e/fake-supabase.mjs` runs an in-memory stand-
 
 | # | Item | Result |
 |---|---|---|
-| 1 | `npm test` (domain vectors 1–8) and `tests-db` | PASS — 162 vitest tests, 20 DB tests |
+| 1 | `npm test` (domain vectors 1–8) and `tests-db` | PASS — 152 vitest tests (domain, API routes, fake-Supabase harness), 20 DB tests |
 | 2 | `npm run build`, `tsc --noEmit` | PASS |
 | 3 | Fresh Supabase project: migrations apply, sign-ups disabled | NOT RUN on real Supabase. Both migrations apply cleanly on PGlite. Sign-ups must be disabled by hand in the dashboard. |
 | 4 | RLS isolation, `sync_credentials` unreadable from the browser | PASS on PGlite with the real policies (second user sees no rows or photos). Re-check on the real project. |
